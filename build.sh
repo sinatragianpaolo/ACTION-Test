@@ -1,3 +1,3 @@
 #!/bin/bash
-mkdir build
-sed 's/%%name%%/GINO/' index.tpl.html > build/index.html
+mkdir -p build
+sed "s/%%name%%/$1/" index.tpl.html > build/index.html
