@@ -22,9 +22,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build html
-        run: ./build.sh $Name
-        env:
-          Name: Welllolla
+        run: ./build.sh ${{ secrets.NAME }}
         
       - name: Check html
         run: cat ./build/index.html
