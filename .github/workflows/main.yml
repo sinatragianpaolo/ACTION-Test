@@ -22,7 +22,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build html
-        run: ./build.sh Denves
+        run: ./build.sh $Name
+        env:
+          Name: Welllolla
         
       - name: Check html
         run: cat ./build/index.html
