@@ -26,3 +26,8 @@ jobs:
         
       - name: Check html
         run: cat ./build/index.html
+        
+      - uses: AButler/upload-release-assets@v2.0
+        with:
+          files: './build/index.html'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
